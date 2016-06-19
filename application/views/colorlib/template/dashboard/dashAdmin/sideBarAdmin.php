@@ -5,7 +5,7 @@
         </div>
         <div class="clearfix"></div>
         <!-- menu profile quick info -->
-        <div class="profile">
+        <!-- <div class="profile">
             <div class="profile_pic">
                 <img src="images/img.jpg" alt="..." class="img-circle profile_img">
             </div>
@@ -13,7 +13,7 @@
                 <span>Welcome,</span>
                 <h2>John Doe</h2>
             </div>
-        </div>
+        </div> -->
         <!-- /menu profile quick info -->
         <br />
         <!-- sidebar menu -->
@@ -21,14 +21,19 @@
             <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                    <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                    <li>
+                    	<a href="<?= site_url('dashboard');?>">
+                    		<i class="fa fa-laptop"></i> Dashboard <span class="label label-success pull-right">Admin</span>
+                    	</a>
+                    </li>
+                    <li><a><i class="fa fa-table"></i> Data <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="index.html">Dashboard</a></li>
-                            <li><a href="index2.html">Dashboard2</a></li>
-                            <li><a href="index3.html">Dashboard3</a></li>
+                            <li><a href="<?= site_url('makul');?>">Data Matakuliah</a></li>
+                            <li><a href="<?= site_url('dosen');?>">Data Dosen</a></li>
+                            <li><a href="<?= site_url('mahasiswa');?>">Data Mahasiswa</a></li>
                         </ul>
                     </li>
-                    <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                    <!-- <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="form.html">General Form</a></li>
                             <li><a href="form_advanced.html">Advanced Components</a></li>
@@ -71,10 +76,10 @@
                             <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
                             <li><a href="fixed_footer.html">Fixed Footer</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
-            <div class="menu_section">
+            <!-- <div class="menu_section">
                 <h3>Live On</h3>
                 <ul class="nav side-menu">
                     <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
@@ -115,7 +120,7 @@
                         </li>
                         <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <!-- /sidebar menu -->
         <!-- /menu footer buttons -->

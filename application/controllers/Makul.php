@@ -7,13 +7,12 @@ class Makul extends CI_Controller {
 		parent::__construct();
 		//Do your magic here
 		$this->load->library(array('template'));
-		$this->load->model(array('Data'));
-		
-		 // $this->baseUrl = $this->uri->segment(1).'/'.$this->uri->segment(2).'/'.$this->uri->segment(3);
+		$this->load->model(array('Data','User'));
 	}
 
 	public function index()
 	{
+		$this->User->allowUsers('admin');
 		$page = $this->Data->page($this->db->get('makul')->num_rows());	
 		$data = array(
 			'title' => "Data Mata Kuliah",
@@ -31,6 +30,7 @@ class Makul extends CI_Controller {
 
 	public function select()
 	{
+		$this->User->allowUsers('admin');
 		$id_makul = $this->uri->segment(3);
 		$page = $this->Data->page($this->db->get('makul')->num_rows());	
 		$data = array(
@@ -51,13 +51,16 @@ class Makul extends CI_Controller {
 
 	public function add()
 	{
+		$this->User->allowUsers('admin');
 		$data = $this->input->post();
+		unset($data['id_makul']);
 		$this->db->insert('makul', $data);
 		redirect('makul','refresh');
 	}
 
 	public function update()
 	{
+		$this->User->allowUsers('admin');
 		$data = $this->input->post();
 		unset($data['id_makul']);
 		$this->db->update('makul', $data, array('id_makul' => $this->input->post('id_makul')));

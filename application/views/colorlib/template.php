@@ -29,8 +29,8 @@
 </head>
 
 <body class="nav-md">
-    <div class="container body">
-        <div class="main_container">
+    <div id="a" class="container body">
+        <div id="b" class="main_container">
           <?= $_sidebar;?>
           <?= $_navbar;?>
           <?= $_content;?>

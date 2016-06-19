@@ -22,7 +22,6 @@ class Template{
     }
 
     function admin($admin,$data=null){
-        // $theme = "themeV2";
         $data['_navbar']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/navBar',$data,true);
         
         $data['_sidebar']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/dashAdmin/sideBarAdmin',$data,true);
@@ -35,7 +34,6 @@ class Template{
     }
 
     function dosen($dosen,$data=null){
-        // $theme = "themeV2";
         $data['_navbar']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/navBar',$data,true);
         
         $data['_sidebar']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/dashDosen/sideBarDosen',$data,true);
@@ -47,41 +45,26 @@ class Template{
         $this->_CI->load->view(''.$this->setTheme().'/template',$data);
     }
 
-    function front($front,$data=null){
-        // $theme = "themeV2";
-        $data['_header']=$this->_CI->load->view(''.$this->setTheme().'/template/home/navHome',$data,true);
-        //isina CSS
-        $data['_sidebar']=$this->_CI->load->view(''.$this->setTheme().'/template/home/setCssHome',$data,true);
-        
-        $data['_content']=$this->_CI->load->view(''.$this->setTheme().'/'.$front,$data,true);
-
-        $data['_footer']=$this->_CI->load->view(''.$this->setTheme().'/template/home/footMenuHome',$data,true);
-               
-        $this->_CI->load->view(''.$this->setTheme().'/template',$data);
-    }
-
     function mhs($mhs,$data=null){
-        // $theme = "themeV2";
-        $data['_header']=$this->_CI->load->view(''.$this->setTheme().'/template/home/navhome',$data,true);
+        $data['_navbar']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/navBar',$data,true);
         
-        $data['_sidebar']=$this->_CI->load->view(''.$this->setTheme().'/template/home/sidehome',$data,true);
+        $data['_sidebar']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/dashDosen/sideBarMhs',$data,true);
         
         $data['_content']=$this->_CI->load->view(''.$this->setTheme().'/'.$mhs,$data,true);
 
-        $data['_footer']=$this->_CI->load->view(''.$this->setTheme().'/template/topnav/footer',$data,true);
+        $data['_footer']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/footerDash',$data,true);
                
         $this->_CI->load->view(''.$this->setTheme().'/template',$data);
     }
 
-    function pembimbing($pembimbing,$data=null){
-        // $theme = "themeV2";
-        $data['_header']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/navDashboard',$data,true);
+    function login($login,$data=null){
+        $data['_navbar']=null;
         
-        $data['_sidebar']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/sidePembimbing',$data,true);
+        $data['_sidebar']=null;
         
-        $data['_content']=$this->_CI->load->view(''.$this->setTheme().'/'.$pembimbing,$data,true);
+        $data['_content']=$this->_CI->load->view(''.$this->setTheme().'/'.$login,$data,true);
 
-        $data['_footer']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/footMenuPembimbing',$data,true);
+        $data['_footer']=null;
                
         $this->_CI->load->view(''.$this->setTheme().'/template',$data);
     }

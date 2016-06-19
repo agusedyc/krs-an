@@ -22,24 +22,25 @@
                     </div>
                     <div class="x_content">
                         <br />
-                        <?php $atrib = array('id' => 'dtMk', 'class' => 'form-vertical form-label-left'); ?>
+                        <?php $atrib = array('id' => 'dtDosen', 'class' => 'form-vertical form-label-left'); ?>
                         <?= form_open_multipart($this->uri->segment(1).'/'.$act = (isset($row)) ? 'update' : 'add',$atrib); ?>
-                            <input type="hidden" name="id_makul" value="<?= (isset($row)) ? $row->id_makul : null; ?>" >
+                        <input type="hidden" name="id_dosen" value="<?= (isset($row)) ? $row->id_dosen : null; ?>" >
+                        <input type="hidden" name="fk_user" value="<?= (isset($row)) ? $row->fk_user : null; ?>" >
                             <div class="form-group col-md-2">
-                                <label>Kode MK <span class="required">*</span></label>
-                                <input type="text" name="kode_mk" value="<?= (isset($row)) ? $row->kode_mk : null; ?>" id="first-name" required="required" class="form-control">
+                                <label>Kode Dosen <span class="required">*</span></label>
+                                <input type="text" name="kode_dosen" value="<?= (isset($row)) ? $row->kode_dosen : null; ?>" id="first-name" required="required" class="form-control">
                             </div>
-                            <div class="form-group col-md-7">
-                                <label>Nama MK <span class="required">*</span></label>
-                                <input type="text" name="nama_mk" value="<?= (isset($row)) ? $row->nama_mk : null; ?>" id="first-name" required="required" class="form-control">
+                            <div class="form-group col-md-6">
+                                <label>Nama Dosen <span class="required">*</span></label>
+                                <input type="text" name="nama_dosen" value="<?= (isset($row)) ? $row->nama_dosen : null; ?>" id="first-name" required="required" class="form-control">
                             </div>
                             <div class="form-group col-md-2">
-                                <label>Semester <span class="required">*</span></label>
-                                <input type="text" name="semester" value="<?= (isset($row)) ? $row->semester : null; ?>" id="first-name" required="required" class="form-control">
+                                <label>Username <span class="required">*</span></label>
+                                <input type="text" name="username" value="<?= (isset($row)) ? $row->username : null; ?>" id="first-name" required="required" class="form-control">
                             </div>
-                            <div class="form-group col-md-1">
-                                <label>SKS <span class="required">*</span></label>
-                                <input type="text" name="sks" value="<?= (isset($row)) ? $row->sks : null; ?>" id="first-name" required="required" class="form-control">
+                            <div class="form-group col-md-2">
+                                <label>Password <span class="required">*</span></label>
+                                <input type="password" name="password" placeholder="Isi Jika Diganti" class="form-control">
                             </div>
                             <div class="ln_solid col-md-12"></div>
                             <div class="form-group col-md-12">
@@ -70,10 +71,8 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Kode MK</th>
-                                    <th>Nama MK</th>
-                                    <th>Semester</th>
-                                    <th>SKS</th>
+                                    <th>Kode Dosen</th>
+                                    <th>Nama Dosen</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -82,18 +81,15 @@
                             <?php foreach ($rows->result() as $value): $no++?>
                                 <tr>
                                     <th scope="row"><?= $no; ?></th>
-                                    <td><?= $value->kode_mk; ?></td>
-                                    <td><?= $value->nama_mk; ?></td>
-                                    <td><?= $value->semester; ?></td>
-                                    <td><?= $value->sks; ?></td>
+                                    <td><?= $value->kode_dosen; ?></td>
+                                    <td><?= $value->nama_dosen; ?></td>
                                     <td>
-                                      <a href="<?= site_url($this->uri->segment(1).'/select/'.$value->id_makul);?>">Edit </a> |
-                                      <a href="<?= site_url($this->uri->segment(1).'/delete/'.$value->id_makul);?>">Delete </a>
+                                      <a href="<?= site_url($this->uri->segment(1).'/select/'.$value->id_dosen);?>">Edit </a> |
+                                      <a href="<?= site_url($this->uri->segment(1).'/delete/'.$value->id_dosen);?>">Delete </a>
                                     </td>
                                 </tr>
                             <?php endforeach ?>
                             </tbody>
-                            
                         </table>
                     </div>
                     <div class="ln_solid col-md-12"></div>
@@ -107,4 +103,4 @@
         </div>
     </div>
 </div>
-<!-- /page content -->
+ <!-- /page content  -->

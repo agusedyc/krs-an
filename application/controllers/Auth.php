@@ -12,8 +12,8 @@ class Auth extends CI_Controller {
 	}
 	public function index()
 	{
-		// redirect('dashboard','refresh');
-		print_r($this->session->userdata());
+		redirect('dashboard','refresh');
+		// print_r($this->session->userdata());
 		// print_r($this->User->hasName('3'));
 
 	}

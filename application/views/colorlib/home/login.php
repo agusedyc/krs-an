@@ -25,7 +25,7 @@
                     <br />
                     <div>
                         <h1><i class="fa fa-check"></i> Krs-An</h1>
-                        <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                        <p>©2016 <a href="http://agusedyc.github.io/">Agus Edy Cahyono</a> Theme By :  Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a> is a <a href="http://getbootstrap.com">Bootstrap 3</a> template. Privacy and Terms</p>
                     </div>
                 </div>
             <?= form_close(); ?>

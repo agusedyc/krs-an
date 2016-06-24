@@ -26,7 +26,8 @@ class User extends CI_Model {
 					'role' => $this->User->hasRole($user->row()->id_user)->role_name,
 					'slug' => $this->User->hasRole($user->row()->id_user)->slug,
 					'username' => $user->row()->username,
-					'nama' => $this->User->hasName($user->row()->id_user),
+					'name' => $this->User->hasName($user->row()->id_user),
+					'nameId' => $this->User->hasNameId($user->row()->id_user),
 					);
 				return $data;
 			}else{
@@ -60,6 +61,22 @@ class User extends CI_Model {
 		         break;
 		   case 'mhs':
 		         return $this->db->get_where('mahasiswa', array('fk_user' => $idUser))->row()->nama_mhs;
+		         break;
+		}
+	}
+
+	function hasNameId($idUser)
+	{
+		$role = $this->User->hasRole($idUser)->slug;
+		switch ($role) {
+		   case 'admin':
+		         return $this->db->get_where('pegawai', array('fk_user' => $idUser))->row()->id_pegawai;
+		         break;
+		   case 'dosen':
+		         return $this->db->get_where('dosen', array('fk_user' => $idUser))->row()->id_dosen;
+		         break;
+		   case 'mhs':
+		         return $this->db->get_where('mahasiswa', array('fk_user' => $idUser))->row()->id_mhs;
 		         break;
 		}
 	}

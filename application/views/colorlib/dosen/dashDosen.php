@@ -3,16 +3,16 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Typography</h3>
+                <h3>Welcome to KRS-An</h3>
               </div>
 
               <div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
+                    <!-- <input type="text" class="form-control" placeholder="Search for...">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button">Go!</button>
-                    </span>
+                    </span> -->
                   </div>
                 </div>
               </div>
@@ -24,18 +24,9 @@
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Typography <small>different design elements</small></h2>
+                    <h2>Quotes </h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
                       </li>
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
@@ -44,19 +35,17 @@
                   </div>
                   <div class="x_content">
 
-                    <div class="col-md-8 col-lg-8 col-sm-7">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
                       <!-- blockquote -->
                       <blockquote>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                          posuere erat a ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer>Someone famous in <cite title="Source Title">Source Title</cite>
+                        <p>“Do it again. Play it again. Sing it again. Read it again. Write it again. Sketch it again. Rehearse it again. Run it again. Try it again. Because again is practice, and practice is improvement, and improvement only leads to perfection.” </p>
+                        <footer> Richelle E. Goodrich, Smile Anyway: <cite title="Source Title">Quotes, Verse, & Grumblings for Every Day of the Year</cite>
                         </footer>
                       </blockquote>
 
                       <blockquote class="blockquote-reverse">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                          posuere erat a ante Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer>Someone famous in <cite title="Source Title">Source Title</cite>
+                        <p>Music doesn't lie. If there is something to be changed in this world, then it can only happen through music.</p>
+                        <footer>Jimi Hendrix <cite title="Source Title">brainyquote</cite>
                         </footer>
                       </blockquote>
                     </div>

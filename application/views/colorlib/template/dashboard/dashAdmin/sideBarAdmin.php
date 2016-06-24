@@ -1,7 +1,7 @@
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
+            <a href="#" class="site_title"><i class="fa fa-check"></i> <span>Krs-An!</span></a>
         </div>
         <div class="clearfix"></div>
         <!-- menu profile quick info -->
@@ -23,7 +23,7 @@
                 <ul class="nav side-menu">
                     <li>
                     	<a href="<?= site_url('dashboard');?>">
-                    		<i class="fa fa-laptop"></i> Dashboard <span class="label label-success pull-right">Admin</span>
+                    		<i class="fa fa-laptop"></i> Dashboard <span class="label label-success pull-right"><?= $this->session->userdata('role'); ?></span>
                     	</a>
                     </li>
                     <li><a><i class="fa fa-table"></i> Data <span class="fa fa-chevron-down"></span></a>

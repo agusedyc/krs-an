@@ -48,7 +48,7 @@ class Template{
     function mhs($mhs,$data=null){
         $data['_navbar']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/navBar',$data,true);
         
-        $data['_sidebar']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/dashDosen/sideBarMhs',$data,true);
+        $data['_sidebar']=$this->_CI->load->view(''.$this->setTheme().'/template/dashboard/dashMhs/sideBarMhs',$data,true);
         
         $data['_content']=$this->_CI->load->view(''.$this->setTheme().'/'.$mhs,$data,true);
 

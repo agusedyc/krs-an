@@ -70,6 +70,13 @@ class Makul extends CI_Controller {
 		echo "</pre>";*/
 	}	
 
+	public function delete()
+	{
+		$id_makul = $this->uri->segment(3);
+		$this->db->delete('makul', array('id_makul' => $id_makul));
+		redirect('makul','refresh');
+	}
+
 }
 
 /* End of file Makul.php */
